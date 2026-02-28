@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Section */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: #2575fc;
+        }
+
+        /* Book Grid */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .book-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .book-info {
+            padding: 20px;
+        }
+
+        .book-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        .book-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .book-info span {
+            display: inline-block;
+            background: #2575fc;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        footer span {
+            color: #2575fc;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px){
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Book World 📚</h1>
+    <p>Discover your next favorite book</p>
+</header>
+
+<section class="container">
+    <div class="section-title">
+        <h2>Our Popular Books</h2>
+    </div>
+
+    <div class="book-grid">
+
+        <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/9780812981605-L.jpg" alt="The Power of Habit">
+            <div class="book-info">
+                <h3>The Power of Habit</h3>
+                <p>By Charles Duhigg</p>
+                <span>Self Help</span>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg" alt="Atomic Habits">
+            <div class="book-info">
+                <h3>Atomic Habits</h3>
+                <p>By James Clear</p>
+                <span>Self Improvement</span>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/9781585424337-L.jpg" alt="Think and Grow Rich">
+            <div class="book-info">
+                <h3>Think and Grow Rich</h3>
+                <p>By Napoleon Hill</p>
+                <span>Business</span>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg" alt="Rich Dad Poor Dad">
+            <div class="book-info">
+                <h3>Rich Dad Poor Dad</h3>
+                <p>By Robert T. Kiyosaki</p>
+                <span>Finance</span>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/9781338216660-L.jpg" alt="Harry Potter and the Cursed Child">
+            <div class="book-info">
+                <h3>Harry Potter and the Cursed Child</h3>
+                <p>By J.K. Rowling</p>
+                <span>Fantasy</span>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/9780807014271-L.jpg" alt="Man's Search for Meaning">
+            <div class="book-info">
+                <h3>Man's Search for Meaning</h3>
+                <p>By Viktor E. Frankl</p>
+                <span>Psychology</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 <span>Book World</span> | Made with ❤️ for Readers</p>
+</footer>
+
+</body>
+</html>
