@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Viewfinder Photography Channel</title>
+    <style>
+:root {
+    --bg-color: #0f0f14;
+    --surface-color: #1a1a22;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0c3;
+    --accent-color: #ffb703;
+    --nav-height: 75px;
+    --gap: 25px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #1c1c28, #0f0f14 60%);
+    color:var(--text-primary);
+    line-height:1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:var(--nav-height);
+    background:rgba(15,15,20,0.8);
+    backdrop-filter: blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    height:100%;
+    padding:0 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    text-decoration:none;
+    color:white;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:var(--accent-color);
+}
+
+.Menu{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+.Menu a{
+    text-decoration:none;
+    color:var(--text-secondary);
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+.Menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:var(--accent-color);
+    transition:0.3s;
+}
+
+.Menu a:hover{
+    color:white;
+}
+
+.Menu a:hover::after{
+    width:100%;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:85vh;
+    margin-top:var(--nav-height);
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+        url('https://picsum.photos/seed/camera/1920/1080') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:3.8rem;
+    font-weight:700;
+    margin-bottom:1rem;
+    letter-spacing:2px;
+}
+
+.hero p{
+    max-width:650px;
+    font-size:1.1rem;
+    color:var(--text-secondary);
+    margin-bottom:2rem;
+}
+
+.cta-button{
+    padding:14px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    background:var(--accent-color);
+    color:black;
+    transition:0.3s ease;
+}
+
+.cta-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(255,183,3,0.4);
+}
+
+/* ================= GALLERY ================= */
+
+.section-title{
+    text-align:center;
+    margin:5rem 0 3rem;
+    font-size:2.2rem;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.gallery-container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 25px 5rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:var(--gap);
+}
+
+.Photo-card{
+    background:var(--surface-color);
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+    transition:0.4s ease;
+}
+
+.Photo-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    transition:transform 0.6s ease;
+}
+
+.Photo-card:hover img{
+    transform:scale(1.1);
+}
+
+.photo-info{
+    padding:18px;
+    background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    position:absolute;
+    bottom:0;
+    width:100%;
+    color:white;
+}
+
+.photo-info h3{
+    font-size:1.1rem;
+}
+
+.photo-info p{
+    font-size:0.85rem;
+    color:#ddd;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0a0a0f;
+    padding:50px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.05);
+}
+
+footer h3{
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+footer p{
+    font-size:0.9rem;
+    color:var(--text-secondary);
+}
+</style>
+</head>
+<body>
+
+ 
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">The Viewfinder<span>.</span></a>
+            <ul class="Menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        <h1>Capture The Moment</h1>
+        <p>Professional photography for portraits, events, and nature. Exploring the world one shutter click at a time.</p>
+        <a href="#gallery" class="cta-button">View Gallery</a>
+    </section>
+
+  
+    <main>
+        <h2 class="section-title">Latest Work</h2>
+        
+        <section id="gallery" class="gallery-container">
+            
+            
+            <article class="Photo-card">
+                
+                <img src="https://picsum.photos/seed/flower/400/300" alt="Colorful flowers in bloom">
+                <div class="photo-info">
+                    <h3>Clasic-pic</h3>
+                    <p>Classic Photography</p>
+                </div>
+            </article>
+
+            <article class="Photo-card">
+                <img src="https://picsum.photos/seed/city/400/300" alt="waves crashing on a rocky shore">
+                <div class="photo-info">
+                    <h3>Ocean</h3>
+                    <p>Waves</p>
+                </div>
+            </article>
+
+    
+            <article class="Photo-card">
+                <img src="https://picsum.photos/seed/animal/400/300" alt="Universe of stars in the night sky">
+                <div class="photo-info">
+                    <h3>Capture the Open Sky</h3>
+                    <p>Night Lights</p>
+                </div>
+            </article>
+
+      
+            <article class="Photo-card">
+                <img src="https://picsum.photos/seed/travel/400/300" alt="Mountain landscape">
+                <div class="photo-info">
+                    <h3>High Peaks</h3>
+                    <p>Travel & Landscape</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+   
+    <footer>
+        <h3>LUMINA PHOTOGRAPHY</h3>
+        <p>&copy; 2023 Photography Channel. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
