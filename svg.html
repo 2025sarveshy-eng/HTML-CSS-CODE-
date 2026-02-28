@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG Updated Colors</title>
+</head>
+
+<body style="background:#f4f6f9; font-family:Arial;">
+
+<!-- CC Logo -->
+<svg width="300" height="300">
+  <circle cx="150" cy="150" r="135" fill="#ffffff" stroke="#2c3e50" stroke-width="18"/>
+  <text x="150" y="190" text-anchor="middle"
+        font-size="120"
+        font-weight="bold"
+        fill="#1abc9c"
+        font-family="Arial">
+        CC
+  </text>
+</svg>
+
+<!-- Pentagon -->
+<svg width="300" height="300">
+  <polygon
+    points="150,30 270,120 220,260 80,260 30,120"
+    stroke="#2c3e50"
+    stroke-width="4"
+    fill="#00bcd4"/>
+</svg>
+
+<!-- Filled Star -->
+<svg width="300" height="300">
+  <polygon
+    points="150,30 185,120 270,120 200,175 230,260 150,210 70,260 100,175 30,120 115,120"
+    stroke="#2c3e50"
+    stroke-width="4"
+    fill="#ffcc00"/>
+</svg>
+
+<!-- Outline Star -->
+<svg width="300" height="300">
+  <path
+    d="M150 30 L190 110 L270 110 L205 165 L230 250 L150 200 L70 250 L95 165 L30 110 L110 110 Z"
+    stroke="#e74c3c"
+    stroke-width="4"
+    fill="none"/>
+</svg>
+
+<!-- Animated Circle -->
+<svg width="300" height="120" style="border:1px solid #ccc">
+  <circle cx="150" cy="60" r="20" fill="#9b59b6">
+    <animateTransform attributeName="transform"
+                      type="scale"
+                      from="1"
+                      to="1.5"
+                      dur="1s"
+                      repeatCount="indefinite"/>
+  </circle>
+</svg>
+
+<!-- Rotating Square -->
+<svg width="300" height="120" style="border:1px solid #ccc">
+  <rect x="130" y="40" width="40" height="40" fill="#ff5722">
+    <animateTransform attributeName="transform"
+                      type="rotate"
+                      from="0 150 60"
+                      to="360 150 60"
+                      dur="2s"
+                      repeatCount="indefinite"/>
+  </rect>
+</svg>
+
+<!-- Fading Text -->
+<svg width="300" height="120" style="border:1px solid #ccc">
+  <text x="100" y="70" font-size="30" fill="#34495e">
+    SVG
+    <animate attributeName="opacity"
+             values="0;1;0"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </text>
+</svg>
+
+<!-- Animated Line -->
+<svg width="300" height="120" style="border:1px solid #ccc">
+  <path d="M 20 60 L 280 60"
+        stroke="#ff4081"
+        stroke-width="5"
+        fill="none"
+        stroke-dasharray="260"
+        stroke-dashoffset="260">
+    <animate attributeName="stroke-dashoffset"
+             from="260"
+             to="0"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </path>
+</svg>
+
+</body>
+</html>
