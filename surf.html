@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WaveRiders Surf Academy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --primary:#0a3d62;
+  --secondary:#00bcd4;
+  --radius:12px;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f0f9ff;
+  color:#222;
+}
+
+/* NAVBAR */
+nav{
+  background:linear-gradient(90deg,var(--primary),#1e6091);
+  padding:15px 4vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  font-size:1.4rem;
+  font-weight:bold;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:2rem;
+}
+
+nav ul li{
+  cursor:pointer;
+}
+
+nav ul li:hover{
+  color:var(--secondary);
+}
+
+/* HERO */
+.hero{
+  height:70vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),
+  url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+.hero h1{
+  font-size:clamp(2rem,5vw,4rem);
+}
+
+.hero p{
+  color:yellow;
+  margin:10px 0;
+}
+
+.hero button{
+  margin-top:15px;
+  padding:12px 30px;
+  border:none;
+  border-radius:var(--radius);
+  background:var(--secondary);
+  color:white;
+  cursor:pointer;
+  font-size:1rem;
+}
+
+.hero button:hover{
+  transform:scale(1.05);
+}
+
+/* ABOUT */
+.about{
+  padding:5rem 2rem;
+  text-align:center;
+  background:
+  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url("https://images.unsplash.com/photo-1501959915551-4e8a04a9f87b") center/cover no-repeat;
+  color:white;
+}
+
+.about h2{
+  color:var(--secondary);
+  margin-bottom:1rem;
+}
+
+.about p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.7;
+}
+
+/* COURSES */
+.courses{
+  padding:5rem 2rem;
+  text-align:center;
+  background:
+  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url("https://images.unsplash.com/photo-1493558103817-58b2924bce98") center/cover no-repeat;
+}
+
+.courses h2{
+  color:white;
+  margin-bottom:2rem;
+}
+
+.course-container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:2rem;
+}
+
+.course-card{
+  width:260px;
+  background:white;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  transition:0.4s;
+}
+
+.course-card:hover{
+  transform:translateY(-10px);
+}
+
+.course-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.course-card h3{
+  padding:15px;
+  color:black;
+}
+
+/* FOOTER */
+footer{
+  background:var(--primary);
+  color:white;
+  text-align:center;
+  padding:1.5rem;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">WaveRiders</div>
+  <ul>
+    <li>Home</li>
+    <li>Courses</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Ride the Waves</h1>
+  <p>Learn surfing with certified instructors</p>
+  <button>Join Now</button>
+</section>
+
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    WaveRiders Surf Academy helps beginners and professionals master the ocean.
+    Safety, fun, and skill — all in one wave.
+  </p>
+</section>
+
+<section class="courses">
+  <h2>Our Courses</h2>
+
+  <div class="course-container">
+
+    <div class="course-card">
+      <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe" alt="Beginner Surfing">
+      <h3>Beginner Surfing</h3>
+    </div>
+
+    <div class="course-card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Intermediate Surfing">
+      <h3>Intermediate Training</h3>
+    </div>
+
+    <div class="course-card">
+      <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="Pro Surfing">
+      <h3>Pro Wave Mastery</h3>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 WaveRiders Surf Academy
+</footer>
+
+</body>
+</html>
