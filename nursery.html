@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenest Nursery</title>
+
+<style>
+:root{
+    --dark-green:#1f3d2b;
+    --mid-green:#2e7d32;
+    --light-green:#66bb6a;
+    --mint:#e8f5e9;
+    --cream:#fdfcf8;
+    --text-dark:#1b1b1b;
+    --text-soft:#5f6f65;
+    --white:#ffffff;
+    --shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:var(--cream);
+    color:var(--text-dark);
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    background:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    z-index:100;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:800;
+    color:var(--dark-green);
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    align-items:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text-soft);
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--mid-green);
+}
+
+.btn-nav{
+    background:var(--dark-green);
+    color:white !important;
+    padding:10px 22px;
+    border-radius:30px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:90px 6%;
+    background:linear-gradient(135deg,var(--mint),var(--cream));
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:3.2rem;
+    color:var(--dark-green);
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.hero-text p{
+    color:var(--text-soft);
+    margin-bottom:20px;
+    max-width:500px;
+}
+
+.cta-btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:var(--mid-green);
+    color:white;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.cta-btn:hover{
+    background:var(--dark-green);
+}
+
+.hero-image{
+    flex:1;
+    text-align:right;
+}
+
+.hero-image img{
+    max-width:100%;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+/* ================= SHOP ================= */
+
+.shop-section{
+    padding:100px 6%;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-header h2{
+    font-size:2.5rem;
+    color:var(--dark-green);
+}
+
+.section-header p{
+    color:var(--text-soft);
+    margin-top:10px;
+}
+
+.plant-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.plant-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:0.4s;
+}
+
+.plant-card:hover{
+    transform:translateY(-8px);
+}
+
+.plant-img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.plant-info{
+    padding:20px;
+}
+
+.plant-name{
+    font-size:1.2rem;
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.plant-price{
+    color:var(--mid-green);
+    font-weight:700;
+    margin-bottom:15px;
+    display:block;
+}
+
+.add-cart{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:var(--dark-green);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.add-cart:hover{
+    background:var(--mid-green);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:var(--dark-green);
+    color:white;
+    padding:60px 6%;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Greenest.</div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="btn-nav">Cart (0)</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Breathe Life Into <br>Your Living Space</h1>
+        <p>Discover our curated collection of indoor plants, succulents, and pots. Delivered fresh to your door.</p>
+        <p>Bring nature into your home.</p>
+        <a href="#shop" class="cta-btn">Shop Plants</a>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Plant">
+    </div>
+</section>
+
+<!-- SHOP SECTION -->
+<section id="shop" class="shop-section">
+    <div class="section-header">
+        <h2>Our Best Sellers</h2>
+        <p>Hand-picked favorites for plant parents of all levels.</p>
+    </div>
+
+    <div class="plant-grid">
+
+        <div class="plant-card">
+            <img src="https://images.unsplash.com/photo-1599687265564-1b8f9f0dff78" class="plant-img">
+            <div class="plant-info">
+                <div class="plant-name">Tulsi Plant</div>
+                <span class="plant-price">₹100</span>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="plant-card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" class="plant-img">
+            <div class="plant-info">
+                <div class="plant-name">Mogra Plant</div>
+                <span class="plant-price">₹100</span>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="plant-card">
+            <img src="https://images.unsplash.com/photo-1601987077223-7c5f63d0c5aa" class="plant-img">
+            <div class="plant-info">
+                <div class="plant-name">Money Plant</div>
+                <span class="plant-price">₹100</span>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="plant-card">
+            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946" class="plant-img">
+            <div class="plant-info">
+                <div class="plant-name">Rose Plant</div>
+                <span class="plant-price">₹100</span>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 Greenest Nursery. All Rights Reserved.
+</footer>
+
+</body>
+</html>
