@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f7f5f0;
+            --surface: #ffffff;
+            --border: #e5e0d8;
+            --accent: #b5936e;
+            --text: #1a1814;
+            --muted: #8c8478;
+            --soft: #ede9e2;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Geist Mono', monospace;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 96px 32px 80px;
+        }
+
+        header {
+            margin-bottom: 72px;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.0;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .meta {
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: var(--border);
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+            margin: 48px 0;
+        }
+
+        .about-section {
+            margin-bottom: 72px;
+        }
+
+        .section-label {
+            font-size: 9px;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .about-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            line-height: 1.8;
+            color: #3a3530;
+            font-weight: 300;
+        }
+
+        .about-text strong {
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            margin-top: 24px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--border);
+        }
+
+        .skill-row {
+            background: var(--surface);
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.2s ease;
+        }
+
+        .skill-row:hover {
+            background: var(--soft);
+        }
+
+        .skill-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .skill-icon {
+            font-size: 1.1rem;
+            width: 28px;
+            text-align: center;
+            opacity: 0.85;
+        }
+
+        .skill-name {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 0.03em;
+        }
+
+        .skill-tag {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            background: var(--soft);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 40px;
+        }
+
+        footer {
+            margin-top: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #7ec98a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Sarvesh<br><em>Yadav</em></h1>
+            <div class="meta">
+                <span>ITM Skill University</span>
+                <div class="meta-dot"></div>
+                <span>B.Tech CSE</span>
+                <div class="meta-dot"></div>
+                <span>First Year</span>
+            </div>
+        </header>
+
+        <div class="line"></div>
+
+        <section class="about-section">
+            <p class="section-label">About Me</p>
+            <p class="about-text">
+                Hi there — I'm a <strong>first-year CSE student</strong> at ITM Skill University, 
+                passionate about technology and constantly eager to explore new frontiers 
+                in this field. Looking forward to growing, building, and learning more 
+                every single day.
+            </p>
+        </section>
+
+        <div class="line"></div>
+
+        <section class="skills-section">
+            <p class="section-label">Programming Languages</p>
+            <div class="skills-list">
+
+                <div class="skill-row">
+                    <div class="skill-left">
+                        <span class="skill-icon">🐍</span>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <span class="skill-tag">General Purpose</span>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-left">
+                        <span class="skill-icon">🌐</span>
+                        <span class="skill-name">HTML & CSS</span>
+                    </div>
+                    <span class="skill-tag">Web Frontend</span>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-left">
+                        <span class="skill-icon">⚡</span>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <span class="skill-tag">Web Scripting</span>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-left">
+                        <span class="skill-icon">⚙️</span>
+                        <span class="skill-name">C++</span>
+                    </div>
+                    <span class="skill-tag">Systems / DSA</span>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <span>©️ 2025 Sarvesh Yadav</span>
+            <div class="status">
+                <div class="status-dot"></div>
+                <span>Open to learning</span>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
